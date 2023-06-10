@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Todo List
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body >
+
+    <div class="Box">
+        <h1 >
+            Todo list
+        </h1>
+    </div>
+    <div class="Box">
+      <%  ejes.forEach((data)=>{%>
+        <form action="/delete" method="POST">
+            <div  class="checkx">
+                <input type="checkbox" name="chechboox" class="strikethrough" value="<%= data._id %>" onchange="this.form.submit()">
+                <label for="checkboox" class="strikethrough" ><p><%=  data.name %></p></label>
+            </div> 
+        </form>
+    <%  }) %>
+        
+            
+           
+        <form action="/" method="POST">
+            <input type="text" name="inpuut" placeholder="Enter the task" class="sww">
+            <button type="submit" class="sww">+</button>
+
+        </form>
+    </div>
+    <div class="triangle"></div>
+
+</body>
+
+
